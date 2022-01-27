@@ -13,4 +13,4 @@ To enact this, **stochastic gradient ascent** is performed on the designated cla
     <figcaption align = "center"><b>Black Swan and Flamingo classes visualized, after 150 gradient updates.</b></figcaption>
 </p>
 
-The most accessible parameters to be configured are: the amount of iterations, the learning rate, and the classifier output class to be optimized. Feel free to tinker with anything, though, whether it be one of the above or something more specific to the model's training process like the optimization function. Happy coding! ❤️
+The most accessible parameters to be configured are: the amount of iterations, the learning rate, and the logit class to be optimized. Feel free to tinker with anything, though, whether it be one of the above or something more specific to the model's training process like the optimization function. Happy coding! ❤️
