@@ -7,8 +7,8 @@ To enact this, **stochastic gradient ascent** is performed on the designated cla
 
 ## Configuring your model
 <p align="center">
-    <img src="results/black_swan.png"/>
-    <img src="results/flamingo_class.png"/>
+    <img src="results/black_swan.jpeg"/>
+    <img src="results/flamingo.jpeg"/>
     <br />
     <figcaption align = "center"><b>Black Swan and Flamingo classes visualized, after 150 gradient updates.</b></figcaption>
 </p>

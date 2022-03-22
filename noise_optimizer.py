@@ -1,6 +1,6 @@
 import torch
 import numpy as np
-from torch.optim import SGD
+from torch.optim import Adam
 from torchvision import models
 from PIL import Image
 import copy
@@ -40,13 +40,14 @@ def recreate_image(im_as_var):
     return recreated_im
 
 processed_image = process(image)
+optimizer = Adam([processed_image], lr=0.1)
 for _ in range(150):
-    optimizer = SGD([processed_image], lr=6)
     output = model(processed_image)
-    class_loss = -output.squeeze(0)[100] # Class (current: 100)
-    model.zero_grad()
+    class_loss = -output.squeeze(0)[130] # Class (current: 100)
+    processed_image.grad = None
     class_loss.backward()
     optimizer.step()
+
 image = recreate_image(processed_image)
 
-Image.fromarray(image)
+Image.fromarray(image).save("/Users/arnavshah/Downloads/optimized_noise.jpeg") # Replace with image path
